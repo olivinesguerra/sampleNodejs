@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name:  sample-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: sample-ip-address
+    kubernetes.io/ingress.allow-http: "false"
+    networking.gke.io/managed-certificates: sample-certificate
+  labels: 
+    app: google-project-id
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /* 
+          backend:
+            serviceName: sample-api-svc
+            servicePort: 8080

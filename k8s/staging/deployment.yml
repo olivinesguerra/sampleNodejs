@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+name: kiindred
+  labels:
+    #Project ID
+    app: sample_dep
+spec:
+  #Run two instances of our application
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: google_app_id
+    spec:
+      #Container details
+      containers:
+        - name: node-app
+          image: <image_url>
+          imagePullPolicy: Always
+          #Ports to expose
+          ports:
+          - containerPort: 3000
+        

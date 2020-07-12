@@ -25,11 +25,14 @@
     "moleculer-repl": "^0.6.2"
   },
   "dependencies": {
-    "moleculer-web": "^0.9.0",
+    "dotenv": "^8.2.0",
+    "ioredis": "^4.14.1",
+    "moleculer": "^0.14.0",
     "moleculer-db": "^0.8.4",
     "moleculer-db-adapter-mongo": "^0.4.7",
-    "ioredis": "^4.14.1",
-    "moleculer": "^0.14.0"
+    "moleculer-web": "^0.9.0",
+    "sequelize": "^5.21.13",
+    "sequelize-cli": "^5.5.1"
   },
   "engines": {
     "node": ">= 10.x.x"
